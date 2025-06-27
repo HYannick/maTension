@@ -12,8 +12,8 @@ const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
-  <div class="w-full rounded-lg card-xs flex flex-col">
-    <div class="mb-5">
+  <div class="w-full rounded-lg card-xs p-5 flex justify-between items-center">
+    <div>
       <p class="text-4xl">{{ title }}</p>
       <p class="text-sm">{{ unit }}</p>
     </div>
