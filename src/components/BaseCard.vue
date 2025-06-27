@@ -18,6 +18,6 @@ const emit = defineEmits(['update:modelValue'])
       <p class="text-sm">{{ unit }}</p>
     </div>
     <input type="number" class="input input-primary w-24 input-xl" :placeholder="placeholder" :value="modelValue"
-           @input="emit('update:modelValue', $event.target.value)"/>
+           @input="emit('update:modelValue', ($event.target as any).value)"/>
   </div>
 </template>
