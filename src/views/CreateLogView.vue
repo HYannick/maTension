@@ -37,12 +37,13 @@ const save = () => {
     <BPStatus :systolic="pulseLog.sys" :diastolic="pulseLog.dia" :pulse="pulseLog.pul"/>
   </div>
   <div class="p-5 space-y-5">
-    <BaseCard title="SYS" unit="mmHg" placeholder="120" v-model="pulseLog.sys"/>
-    <div class="divider"></div>
-    <BaseCard title="DIA" unit="mmHg" placeholder="80" v-model="pulseLog.dia"/>
-    <div class="divider"></div>
-    <BaseCard title="PUL" unit="/min" placeholder="60" v-model="pulseLog.pul"/>
-    <div class="divider"></div>
+    <div class="flex">
+      <BaseCard title="SYS" unit="mmHg" placeholder="120" v-model="pulseLog.sys"/>
+      <div class="divider divider-horizontal"></div>
+      <BaseCard title="DIA" unit="mmHg" placeholder="80" v-model="pulseLog.dia"/>
+      <div class="divider divider-horizontal"></div>
+      <BaseCard title="PUL" unit="/min" placeholder="60" v-model="pulseLog.pul"/>
+    </div>
     <button class="btn btn-xl btn-primary btn-block" :class="{
       'btn-disabled': !pulseLog.sys || !pulseLog.dia || !pulseLog.pul
     }" @click="save">Enregistrer</button>
